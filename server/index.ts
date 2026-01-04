@@ -11,7 +11,7 @@ const io = new Server(server, {
 io.on('connection',(socket)=>{
   console.log('a user connected')
   
-  socket.on('message',(message)=>{
+  socket.on('message',(message:string)=>{
     console.log(message)
     io.emit('message',message)
   })
