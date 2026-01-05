@@ -10,10 +10,12 @@ const io = new Server(server, {
 
 io.on('connection',(socket)=>{
   console.log('a user connected')
-  
-  socket.on('message',(message:string)=>{
-    console.log(message)
-    io.emit('message',message)
+  socket.on('message',(text:string)=>{
+    console.log(text)
+    io.emit('message',{
+      text,
+      senderId: socket.id
+    })
   })
 })
 
