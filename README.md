@@ -1,5 +1,3 @@
----
-
 ## ⚙️ Tech Stack
 
 - **Bun** – Runtime for the server  
